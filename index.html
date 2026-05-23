@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meu Blog</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="root"></div>
+
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <script type="text/babel">
+    const { useState, useEffect } = React;
+
+    function ArticleCard({ artigo, index }) {
+      const numero = String(index + 1).padStart(2, '0');
+
+      return (
+        <a href={`articles/${artigo.slug}.html`} className="card">
+          <div className="card-top">
+            <span className="card-number">#{numero}</span>
+            <span className="card-arrow">↗</span>
+          </div>
+
+          <h2 className="card-title">{artigo.titulo}</h2>
+
+          {artigo.descricao && (
+            <p className="card-desc">{artigo.descricao}</p>
+          )}
+
+          <span className="card-date">{artigo.data}</span>
+        </a>
+      );
+    }
+
+    function App() {
+      const [artigos, setArtigos] = useState([]);
+      const [loading, setLoading] = useState(true);
+
+      useEffect(() => {
+        fetch('artigos.json')
+          .then(res => res.json())
+          .then(data => {
+            // Ordena do mais recente para o mais antigo
+            const ordenados = [...data].sort((a, b) =>
+              new Date(b.data_iso) - new Date(a.data_iso)
+            );
+            setArtigos(ordenados);
+          })
+          .catch(err => console.error('Erro ao carregar artigos:', err))
+          .finally(() => setLoading(false));
+      }, []);
+
+      return (
+        <>
+          <div className="container">
+            <header className="header">
+              <p className="blog-eyebrow">@Winpenning - Henrique Ziemer</p>
+              <h1 className="blog-title">Henrique on Code</h1>
+              <p className="blog-subtitle">Compilado de artigos dos conteúdos que eu estudo e das idéias que tenho.</p>
+            </header>
+
+            <main>
+              {loading && <p className="loading">Carregando artigos...</p>}
+
+              {!loading && artigos.length === 0 && (
+                <p className="empty">Nenhum artigo publicado ainda.</p>
+              )}
+
+              {!loading && artigos.length > 0 && (
+                <div className="grid">
+                  {artigos.map((artigo, i) => (
+                    <ArticleCard key={artigo.slug} artigo={artigo} index={i} />
+                  ))}
+                </div>
+              )}
+            </main>
+
+            <footer className="footer">
+              <p className="footer-text">Alegrai-vos na esperança, sede pacientes na tribulação, preservai na oração. Romanos 12:12</p>
+              <br/>
+              <p className="footer-text">© {new Date().getFullYear()} — Paulo Henrique Ziemer dos Santos</p>
+            </footer>
+          </div>
+        </>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+  </script>
+</body>
+</html>

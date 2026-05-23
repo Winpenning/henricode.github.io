@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Meu Primeiro Artigo de Exemplo — Meu Blog</title>
+
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div class="container article-container">
+
+    <!-- Navegação de volta -->
+    <nav class="back-nav">
+      <a href="../index.html" class="back-link">← Voltar ao blog</a>
+    </nav>
+
+    <article>
+
+      <!-- Cabeçalho do artigo -->
+      <header class="article-header">
+        <div class="article-meta">
+          <!-- DATA_DO_ARTIGO -->
+          <span class="article-date">Mai 2025</span>
+        </div>
+        <!-- TITULO_DO_ARTIGO -->
+        <h1 class="article-title">Sobre este blog</h1>
+      </header>
+
+      <!-- CONTEUDO_DO_ARTIGO -->
+      <div class="article-content">
+        
+        <h2>Sobre este blog</h2>
+        
+        <p>
+          Bom dia.
+        </p>
+
+        <p>
+          Durante umas andanças que ocorreram na minha vida recentemente, me encontrei em uma nova situação. Sempre gostei de estudar escrevendo em papel, tive muitos e muitos cadernos já, mas o problema deles é que não posso levar todos para qualquer lugar que eu vá. 
+        </p>
+        <p>  
+          Com isso em mente, começei a utilizar alguns SaaS (como Notion) para armazenar que eu fosse estudando. Mesmo assim, eu senti que poderia fazer algo mais interessante. 
+        </p>
+        <p>
+          Então tive a idéia de ao invés de apenas armazenar conteúdos em um Notion da vida, eu criasse meu próprio blog, um projeto do zero em que eu poderia literalmente colocar meus estudos (e minhas idéias malucas também) de um jeito que eu tivesse total liberdade para alterar e organizar os conteúdos, de maneira acessível globalmente e que pudesse compartilhar conhecimentos com outras pessoas. Enfim, espero que gostem.
+        </p>
+        <p>
+          Lembrem-se que em caso de qualquer dúvida, crítica ou sugestão, podem me contatar através do meu e-mail: zs.phenriqueprofessional@gmail.com ou através do meu LinkedIn: https://www.linkedin.com/in/winpenning/.
+        </p>
+
+        <h2>Sobre mim</h2>
+
+        <p>
+          Bom. Sou uma pessoa comum, sem nada de muito especial. Vim do meu amado estado de Santa Catarina, no sul do Brasil, e sou apaixonado pela vida.
+        </p>
+
+        <p>
+          As coisas que eu mais gosto de fazer são: Viajar (amor fazer hiking e mochilão), estudar, jogar jogos (tanto videogame quanto jogos de tabuleiro), tocar bateria e guitarra.
+        </p>
+
+        
+        <h2>Eu em um hiking em Grenoble - França</h2>
+        <img src="images/grenoble.JPEG" alt="Hiking em Grenoble" class="article-image" />
+
+
+
+        <h2>Este projeto em termos técnicos</h2>
+
+        <p>Agora vamos parar com a parte chata e partir para a ação. Como dito anteriormente, uma das motivações para este projeto é tanto o aprendizado técnico quanto a liberdade total que eu terei no site e na elaboração dos artigos.</p>
+        <p>A primeira coisa que eu pensei foi na arquitetura do projeto. Queria algo simples e sem muita complexidade (até por que eu vou automatizar a criação técnica dos artigos). A arquiterua atualmente está assim:</p>
+        <img src="images/BlogArctecture.png" alt="Arquitetura do Blog" class="article-image" />
+
+        <p>Como podem ver, a estrutura é bastante simples. Existindo esses 4 componentes principais.</p>
+        
+        <p>O primeiro deles é o <strong>Blog</strong> que é esse site que vocês estão acessando agora é estático e não tem muita complexidade. Kit padrão de frontend e React.</p>
+        <p>O blog por sua vez é hospedado em um serviço de hospedagem estática, o <strong>GitHub Pages</strong>. Basicamente, ao subir alguma modificação em determinada branch, o deploy é feito de maneira automática.</p>
+        <p>Temos também o <strong>Gestor de páginas</strong> (que é a minha parte favorita). Basicamente, é uma aplicação local minha que eu jogo o conteúdo do artigo, o título e imagens. A partir disso, ele cria uma nova página para esse blog com todas as tags de maneira que eu não tenha que alterar manualmente o frontend. Após isso ele automaticamente, sobe essa nova página no meu repositório, fazendo com que assim, vá direto para o site hospedado.</p>
+        <p>Assim o único trabalho que tenho (se não quiser criar algo mais manual e específico) é apenas escrever o conteúdo que eu quero e clicar em "Salvar e publicar" que o Gestor de páginas faz o resto.</p>
+        <p>E claro, além de criar e publicar a página no meu blog, ele também salva essa informação em um banco de dados local no momento.</p>
+      
+        <p>Bom. Espero que tenham gostado deste primeiro artigo. No mais, no caso de qualquer dúvida, não hesitem em me contatar e até a próxima :)</p>
+      </div>
+    </article>
+
+    <footer class="footer">
+      <p class="footer-text">Alegrai-vos na esperança, sede pacientes na tribulação, preservai na oração. Romanos 12:12</p>
+      <p class="footer-text">© 2026 - Paulo Henrique Ziemer dos Santos</p>
+    </footer>
+
+  </div>
+</body>
+</html>
