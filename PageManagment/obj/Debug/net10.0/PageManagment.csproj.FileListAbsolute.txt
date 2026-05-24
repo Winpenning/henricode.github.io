@@ -1,0 +1,15 @@
+C:\repo\henricode.github.io\PageManagment\bin\Debug\net10.0\PageManagment.exe
+C:\repo\henricode.github.io\PageManagment\bin\Debug\net10.0\PageManagment.deps.json
+C:\repo\henricode.github.io\PageManagment\bin\Debug\net10.0\PageManagment.runtimeconfig.json
+C:\repo\henricode.github.io\PageManagment\bin\Debug\net10.0\PageManagment.dll
+C:\repo\henricode.github.io\PageManagment\bin\Debug\net10.0\PageManagment.pdb
+C:\repo\henricode.github.io\PageManagment\obj\Debug\net10.0\PageManagment.GeneratedMSBuildEditorConfig.editorconfig
+C:\repo\henricode.github.io\PageManagment\obj\Debug\net10.0\PageManagment.AssemblyInfoInputs.cache
+C:\repo\henricode.github.io\PageManagment\obj\Debug\net10.0\PageManagment.AssemblyInfo.cs
+C:\repo\henricode.github.io\PageManagment\obj\Debug\net10.0\PageManagment.csproj.CoreCompileInputs.cache
+C:\repo\henricode.github.io\PageManagment\obj\Debug\net10.0\PageManagment.sourcelink.json
+C:\repo\henricode.github.io\PageManagment\obj\Debug\net10.0\PageManagment.dll
+C:\repo\henricode.github.io\PageManagment\obj\Debug\net10.0\refint\PageManagment.dll
+C:\repo\henricode.github.io\PageManagment\obj\Debug\net10.0\PageManagment.pdb
+C:\repo\henricode.github.io\PageManagment\obj\Debug\net10.0\PageManagment.genruntimeconfig.cache
+C:\repo\henricode.github.io\PageManagment\obj\Debug\net10.0\ref\PageManagment.dll
